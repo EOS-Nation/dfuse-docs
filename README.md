@@ -5,13 +5,14 @@ We welcome contributions to improve the documentation. Simply open a pull reques
 ## Requirements
 
 - Hugo **Extended** (with SCSS support), version 0.58.3 or higher
-- Install from source (with SCSS support) with:
-
-```
-git checkout github.com/gohugoio/hugo
-cd hugo
-go install -v --tags extended
-```
+  - Install corresponding `hugo_extended_*` package from [binaries](https://github.com/gohugoio/hugo/releases), or
+  - Build from source code
+  ```
+  git checkout github.com/gohugoio/hugo
+  cd hugo
+  CGO_ENABLED=1
+  go install -v --tags extended
+  ```
 
 ## Development
 
