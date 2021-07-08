@@ -28,13 +28,12 @@ The GraphQL API Reference content is generated straight from the GraphQL schema 
 we support.
 
 To update them, a pre-defined project layout on disk is expected by the script. You must have the three
-following project colocated as siblings alongside the `docs` project:
+following project colocated as siblings alongside the `dfuse-docs` project:
 
-- `docs`
+- `dfuse-docs`
 - `dfuse-eosio`
-- `dfuse-ethereum`
 
-The later two must be named verbatim, the first one `docs` could be named whatever you like. Once the
+The later two must be named verbatim, the first one `dfuse-docs` could be named whatever you like. Once the
 following layout exist on your local workstation, to update the GraphQL generate API reference data,
 first install the script dependencies:
 
@@ -48,7 +47,7 @@ Then run the following command:
 node graphql.js
 ```
 
-This should update the file `data/eos/graphql.json` and `data/eth/graphql.json` (and any other
+This should update the file `data/eos/graphql.json` (and any other
 chains we now support) if the GraphQL schema has been updated.
 
 ## Content Structure
