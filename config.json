@@ -22,7 +22,7 @@
       "topLevel": "Documentation"
     },
     "CustomCss": ["css/override.css"],
-    "BookRepo": "https://github.com/eosnationftw/dfuse-docs",
+    "BookRepo": "https://github.com/EOS-Nation/dfuse-docs",
     "BookEditPath": "edit/master/content",
     "SectionPagesMenu": "main"
   },
