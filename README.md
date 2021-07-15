@@ -110,18 +110,6 @@ Example code can then be referenced with the following shortcode:
 
 Any commit to master automatically triggers a deployment. For this reason, the master branch is locked, requiring all changes to go through an approved pull request.
 
-Reference
-ETH -=> Endpoint ALPHA
-
-<new> side menu
-
-alpha (red)
-beta (yeallo-orangy)
-stage (light gray)
-add sub-title to graphql shortcode
-fix
-
-refactor pages
 
 ```
 
