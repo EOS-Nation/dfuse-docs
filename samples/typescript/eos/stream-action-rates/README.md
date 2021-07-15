@@ -72,7 +72,7 @@ export const apolloClient = new ApolloClient({
 
 ### GraphQL query
 
-- The dfuse GraphQL documentation can be found [here](https://docs.dfuse.io/#graphql)
+- The dfuse GraphQL documentation can be found [here](https://docs.dfuse.eosnation.io/#graphql)
 - If you are not familiar with GraphQL already, take a look at [Introduction to GraphQL](https://graphql.org/learn/)
 - To help you construct your query and access our API documentation you can use [GraphiQL](https://mainnet.eos.dfuse.io/graphiql/) _"A graphical interactive in-browser GraphQL IDE."_
 https://mainnet.eos.dfuse.io/graphiql/
@@ -174,4 +174,4 @@ onSubscriptionData = ({ client, subscriptionData }: any) => {
 The snippet above contains an `undo` parameter (returned inside the payload of the subscription response),
 that parameter handles micro-forks inside the chain and the counter is decremented if it is set to `true`.
 
-You can read more about [navigating forks](https://docs.dfuse.io/#websocket-navigating-forks) in our documentation.
+You can read more about [navigating forks](https://docs.dfuse.eosnation.io/#websocket-navigating-forks) in our documentation.

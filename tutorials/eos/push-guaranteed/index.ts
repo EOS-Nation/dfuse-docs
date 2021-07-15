@@ -89,7 +89,7 @@ async function main() {
       quantity: config.transferQuantity,
       memo: `Transaction with push guaranteed '${
         config.guaranteed
-      }' from dfuse (https://docs.dfuse.io/#rest-api-post-push_transaction)`
+      }' from dfuse (https://docs.dfuse.eosnation.io/eosio/public-apis/tutorials/writing-on-chain)`
     }
   }
 

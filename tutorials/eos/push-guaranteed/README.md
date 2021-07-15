@@ -8,7 +8,7 @@ difference is that, when the required headers are present, you'll get the respon
 back only when your transaction has reach a block, passed 1, 2 or 3 handoffs or is
 irreversible (depending on value passed in header `X-Eos-Push-Guarantee`).
 
-See https://docs.dfuse.io/#rest-api-post-push_transaction
+See https://docs.dfuse.eosnation.io/eosio/public-apis/tutorials/writing-on-chain
 
 ## Quick Start
 
@@ -74,7 +74,7 @@ the various values for the push guaranteed. Valid values are:
 - `handoffs:3`
 - `irreversible`
 
-See https://docs.dfuse.io/#rest-api-post-push_transaction
+See https://docs.dfuse.eosnation.io/eosio/public-apis/tutorials/writing-on-chain
 
 ### Headers
 

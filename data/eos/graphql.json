@@ -2371,7 +2371,7 @@
           "reqType": true,
           "name": "String"
         },
-        "description": "See https://docs.dfuse.io/eosio/public-apis/reference/search/cursors",
+        "description": "See https://docs.dfuse.eosnation.io/eosio/public-apis/reference/search/cursors",
         "arguments": []
       },
       {
@@ -2542,7 +2542,7 @@
           "reqType": true,
           "name": "String"
         },
-        "description": "See https://docs.dfuse.io/eosio/public-apis/reference/search/cursors",
+        "description": "See https://docs.dfuse.eosnation.io/eosio/public-apis/reference/search/cursors",
         "arguments": []
       },
       {
