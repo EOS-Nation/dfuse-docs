@@ -1,8 +1,6 @@
 {{ $protocol := "" }}
 
-{{ if eq .Page.Type "ethereum" }}
-    {{ $protocol = "eth" }}
-{{ else if eq .Page.Type "eosio" }}
+{{ if eq .Page.Type "eosio" }}
     {{ $protocol = "eosio" }}
 {{ else }}
     {{ $protocol = "dfuse" }}

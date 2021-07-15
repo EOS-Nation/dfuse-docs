@@ -92,10 +92,6 @@ const redirectMap = {
   ],
   "/eosio/public-apis/tutorials/": ["/#get-started-tutorials"],
   "/eosio/public-apis/reference/endpoints/": ["/#endpoints"],
-  "/reference/ethereum/endpoints/": [
-    "/#eth-mainnet",
-    "/#ropsten-mainnet",
-  ],
   "/eosio/public-apis/reference/endpoints/": [
     "/#eosio---mainnet",
     "/#eosio---cryptokylin",

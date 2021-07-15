@@ -9,7 +9,6 @@ aliases:
 For protocol-specific ways of passing authentication, please refer to each protocol:
 
 * [EOSIO-specific authentication docs]({{< ref "/eosio/public-apis/reference/authentication" >}})
-* [Ethereum-specific authentication docs]({{< ref "/ethereum/public-apis/reference/authentication" >}})
 
 
 ## Types of keys

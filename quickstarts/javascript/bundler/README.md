@@ -19,16 +19,16 @@ Vue.js applications.
 Before invoking the build step, be sure to export your dfuse API key
 into the `DFUSE_API_KEY` environment variable.
 
-For example, to run the Ethereum example, you would do:
+For example, to run the EOSIO example, you would do:
 
 ```
 export DFUSE_API_KEY=web_abcdef12345678900000000000
-npm run build:ethereum
+npm run build:eosio
 
-# Open `index.ethereum.html` directly in your favorite Browser
-open index.ethereum.html       # Mac
-xdg-open index.ethereum.html   # Ubuntu
-start index.ethereum.thml      # Windows
+# Open `index.eosio.html` directly in your favorite Browser
+open index.eosio.html       # Mac
+xdg-open index.eosio.html   # Ubuntu
+start index.eosio.thml      # Windows
 ```
 
 #### Bootstrap

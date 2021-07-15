@@ -12,11 +12,11 @@ Then run the `index.<chain>.js` file for the chain you want to run
 the quickstart example for. Before invoking the script, be sure to export
 your dfuse API key into the `DFUSE_API_KEY` environment variable.
 
-For example, to run the Ethereum example, you would do:
+For example, to run the EOSIO example, you would do:
 
 ```
 export DFUSE_API_KEY=web_abcdef12345678900000000000
-node index.ethereum.js
+node index.eosio.js
 ```
 
 #### Bootstrap

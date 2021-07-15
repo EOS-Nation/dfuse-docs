@@ -24,7 +24,6 @@ forks, through the use of [cursors]({{< relref "/platform/public-apis/cursors" >
 
 ## Supported search terms
 
-* [Ethereum search terms reference]({{< ref "/ethereum/public-apis/reference/search/terms" >}}).
 * [EOSIO search terms reference]({{< ref "/eosio/public-apis/reference/search/terms" >}}).
 
 ## Operators
@@ -146,4 +145,3 @@ Resolution of block range in regards to search inputs has some differences depen
 using. Refers to the following specific search range pages for the blockchain are working with:
 
 - [EOSIO]({{< ref "/eosio/public-apis/reference/search/block-ranges" >}})
-- [Ethereum]({{< ref "/ethereum/public-apis/reference/search/block-ranges" >}})

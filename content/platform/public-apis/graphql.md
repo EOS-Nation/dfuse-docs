@@ -29,7 +29,6 @@ The GraphQL API offers two types of requests, Queries and Subscriptions, allowin
 You can find the dfuse GraphQL endpoints within the docs of the chain you are developing on:
 
 * [EOSIO]({{< ref "/eosio/public-apis/reference/graphql-api" >}})
-* [Ethereum]({{< ref "/ethereum/public-apis/reference/graphql-api" >}})
 
 ## Queries
 

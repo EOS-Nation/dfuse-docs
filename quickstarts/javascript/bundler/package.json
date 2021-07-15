@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "build:eosio": "webpack --env.chainId=eosio --config webpack.prod.js",
-    "build:ethereum": "webpack --env.chainId=ethereum --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",

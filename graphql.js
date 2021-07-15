@@ -109,16 +109,6 @@ function formatDefaultValue(def) {
   }
 }
 
-// processSources([
-//   '../dfuse-ethereum/dgraphql/schema/subscription.graphql',
-//   '../dfuse-ethereum/dgraphql/schema/subscription_alpha.graphql',
-//   '../dfuse-ethereum/dgraphql/schema/query.graphql',
-// //  '../dfuse-ethereum/dgraphql/schema/query_alpha.graphql',
-//   '../dfuse-ethereum/dgraphql/schema/transactions.graphql',
-//   '../dfuse-ethereum/dgraphql/schema/block.graphql',
-//   '../dfuse-ethereum/dgraphql/schema/trx_state_tracker.graphql',
-// ], 'data/eth/graphql.json')
-
 processSources([
   '../dfuse-eosio/dgraphql/schema/subscription.graphql',
   '../dfuse-eosio/dgraphql/schema/query.graphql',

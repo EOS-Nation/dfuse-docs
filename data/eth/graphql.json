@@ -149,7 +149,6 @@
           "reqType": true,
           "name": "TransactionState"
         },
-        "description": "Subscribe to a transaction to follow its lifecycle (inclusion in a block, confirmations, etc.).\nThe transaction can be in an `unknown` or `pending` state at the time of the request\nSee https://docs.dfuse.io/guides/ethereum/concepts/trx_lifecycle/",
         "arguments": [
           {
             "name": "hash",
@@ -327,34 +326,12 @@
         "description": "Search the blockchain forward for transaction *execution traces* based on `query`.\nSee: https://docs.dfuse.io/guides/core-concepts/search-query-language\n\nWARN: always consider the `undo` field in forward searches, which signal that the matching element\nwas in fact REMOVED from the chain because of blocks reorganization.  The `undo` field is always `false` in backward searches.",
         "arguments": [
           {
-            "name": "indexName",
-            "type": {
-              "reqType": true,
-              "name": "TRANSACTIONS_INDEX_NAME"
-            },
-            "description": "The index that will be queried (CALLS or LOGS), see https://docs.dfuse.io/reference/ethereum/search-terms/"
-          },
-          {
             "name": "query",
             "type": {
               "reqType": true,
               "name": "String"
             },
             "description": "See https://docs.dfuse.io/guides/core-concepts/search-query-language"
-          },
-          {
-            "name": "lowBlockNum",
-            "type": {
-              "name": "Int64"
-            },
-            "description": "Lower boundary for search. Use -1 for HEAD. See https://docs.dfuse.io/guides/ethereum/concepts/search-ranges/"
-          },
-          {
-            "name": "highBlockNum",
-            "type": {
-              "name": "Int64"
-            },
-            "description": "Upper boundary for search. Use -1 for HEAD. See https://docs.dfuse.io/guides/ethereum/concepts/search-ranges/"
           },
           {
             "name": "cursor",
@@ -541,15 +518,6 @@
             "description": ""
           }
         ]
-      },
-      {
-        "name": "gasLimit",
-        "type": {
-          "reqType": true,
-          "name": "Uint64"
-        },
-        "description": "`gasLimit` is the maximum amount of gas this transaction can consume. Other Ethereum nodes often name this field simply `gas`. Alias the field name if you prefer. See: https://graphql.org/learn/queries/#aliases",
-        "arguments": []
       },
       {
         "name": "value",
@@ -741,15 +709,6 @@
             "description": ""
           }
         ]
-      },
-      {
-        "name": "gasLimit",
-        "type": {
-          "reqType": true,
-          "name": "Uint64"
-        },
-        "description": "`gasLimit` is the maximum amount of gas this transaction can consume. Other Ethereum nodes often name this field simply `gas`. Alias the field name if you prefer. See: https://graphql.org/learn/queries/#aliases",
-        "arguments": []
       },
       {
         "name": "value",
@@ -1120,32 +1079,6 @@
           "name": "Uint64"
         },
         "description": "`gasLimit` is the maximum gas value **specifically** set by this call. We use the term **specifically** since for transaction call (i.e. the first call), this limit here will be reduced by the implicit transaction gas cost.",
-        "arguments": []
-      },
-      {
-        "name": "status",
-        "type": {
-          "reqType": true,
-          "name": "TRANSACTION_STATUS"
-        },
-        "description": "`status` represents the outcome of the execution of this Call.\n\n*Important*: Relying solely on status of the call to determine if the state changes performed by the call were committed is wrong. The way Ethereum internal calls work is that if the callee (i.e. the parent) fails, all it's child calls are reverted even if they succeed. Refer to the `stateReverted` flag to determine if the call's changes were committed to the chain.",
-        "arguments": []
-      },
-      {
-        "name": "stateReverted",
-        "type": {
-          "reqType": true,
-          "name": "Boolean"
-        },
-        "description": "`stateReverted` determines if the following, regardless of its `status`, was committed to the chain completely.\n\nThe way Ethereum internal calls work is that if the callee (i.e. the parent) fails, all it's child calls are reverted even if they succeed. For example, assume a big transactions that performs internal calls and themselves perform other deep calls.\n\n```\nTransaction 0xe604e8...\n  Call #2\n  Call #3\n    Call #4\n    Call #5\n    Call #6\n  Call #7\n  Call #8\n    Call #9\n      Call #10\n  Call #11\n```\n\nIn this hierarchy, if Call #3 fails, the Call #4, #5 and #6 are reverted automatically by the Ethereum blockchain and the state changes performed by those calls are reverted. This means you cannot rely solely on the call's `status` to take a decision.\n\nThe `stateReverted` field on the opposite is aware of the call hierarchy and will correctly flag Call #3, #4, #5 and #6 has being `stateReverted: true` because we correctly inferred that since Call #3 failed, all its children (and children of children recursively) have been reverted by the chain. You would end up with the following fields:\n\n```\nTransaction 0xe604e8... (status: success)\n  Call #2 (status: success, stateReverted: false)\n  Call #3 (status: failed, stateReverted: true)\n    Call #4 (status: success, stateReverted: true)\n    Call #5 (status: success, stateReverted: true)\n    Call #6 (status: success, stateReverted: true)\n  Call #7 (status: success, stateReverted: false)\n  Call #8 (status: failed, stateReverted: true)\n    Call #9 (status: success, stateReverted: true)\n      Call #10 (status: success, stateReverted: true)\n  Call #11 (status: failed, stateReverted: true)\n```",
-        "arguments": []
-      },
-      {
-        "name": "failureCause",
-        "type": {
-          "name": "String"
-        },
-        "description": "Defines the cause of the failure. Will be set only when `status` is either `REVERTED` or `FAILED`. The reason is a free form string extracted from the Ethereum node that executed the call.\n\nIMPORTANT: This field has no backward policy and the value could change at any moment. Use it for logging purposes, direct user display, debugging help etc. Use it for logic decisions at your own risk.",
         "arguments": []
       },
       {
@@ -1680,157 +1613,6 @@
             "description": ""
           }
         ]
-      }
-    ]
-  },
-  {
-    "name": "BlockHeader",
-    "hideChildren": true,
-    "description": "Header of an Ethereum block",
-    "fields": [
-      {
-        "name": "parentHash",
-        "type": {
-          "reqType": true,
-          "name": "String"
-        },
-        "description": "Hash of the parent block",
-        "arguments": []
-      },
-      {
-        "name": "unclesHash",
-        "type": {
-          "reqType": true,
-          "name": "String"
-        },
-        "description": "",
-        "arguments": []
-      },
-      {
-        "name": "coinbase",
-        "type": {
-          "reqType": true,
-          "name": "String"
-        },
-        "description": "Address of the block miner",
-        "arguments": []
-      },
-      {
-        "name": "stateRoot",
-        "type": {
-          "reqType": true,
-          "name": "String"
-        },
-        "description": "Hash of the state trie’s root node",
-        "arguments": []
-      },
-      {
-        "name": "transactionsRoot",
-        "type": {
-          "reqType": true,
-          "name": "String"
-        },
-        "description": "",
-        "arguments": []
-      },
-      {
-        "name": "receiptRoot",
-        "type": {
-          "reqType": true,
-          "name": "String"
-        },
-        "description": "",
-        "arguments": []
-      },
-      {
-        "name": "logsBloom",
-        "type": {
-          "reqType": true,
-          "name": "String"
-        },
-        "description": "Bloom Filter, used to optimize searching for transactions inside this block",
-        "arguments": []
-      },
-      {
-        "name": "difficulty",
-        "type": {
-          "reqType": true,
-          "name": "Uint64"
-        },
-        "description": "",
-        "arguments": []
-      },
-      {
-        "name": "number",
-        "type": {
-          "reqType": true,
-          "name": "Uint64"
-        },
-        "description": "Sequential number of this block on the chain. Unlike the hash, it is not unique because of forked blocks.",
-        "arguments": []
-      },
-      {
-        "name": "gasLimit",
-        "type": {
-          "reqType": true,
-          "name": "Uint64"
-        },
-        "description": "Maximum amount of gas allowed in a block (determines how many transactions can fit into it)",
-        "arguments": []
-      },
-      {
-        "name": "gasUsed",
-        "type": {
-          "reqType": true,
-          "name": "Uint64"
-        },
-        "description": "Total amount of gas used during execution of all transactions",
-        "arguments": []
-      },
-      {
-        "name": "timestamp",
-        "type": {
-          "reqType": true,
-          "name": "Uint64"
-        },
-        "description": "Timestamp of the mining of that block",
-        "arguments": []
-      },
-      {
-        "name": "extraData",
-        "type": {
-          "reqType": true,
-          "name": "String"
-        },
-        "description": "Arbitrary data injected by the miner of this block",
-        "arguments": []
-      },
-      {
-        "name": "mixHash",
-        "type": {
-          "reqType": true,
-          "name": "String"
-        },
-        "description": "",
-        "arguments": []
-      },
-      {
-        "name": "nonce",
-        "type": {
-          "reqType": true,
-          "name": "Uint64"
-        },
-        "description": "Proof of work nonce - The random value in a block that was used get the proof of work satisfied",
-        "arguments": []
-      },
-      {
-        "name": "hash",
-        "type": {
-          "reqType": true,
-          "name": "String"
-        },
-        "description": "Hash (or ID) of this block. It is a unique pointer to this block.",
-        "arguments": []
       }
     ]
   },

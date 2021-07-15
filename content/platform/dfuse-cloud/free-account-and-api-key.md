@@ -4,7 +4,6 @@ title: Getting started with your account and API key
 sideNavTitle: Account & API key
 aliases:
   - /guides/eosio/getting-started/how-to-work-with-your-free-account/
-  - /guides/ethereum/getting-started/how-to-work-with-your-free-account/
   - /notions/free-account-and-api-key/
 
 ---

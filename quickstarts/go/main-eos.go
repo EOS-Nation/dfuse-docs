@@ -67,67 +67,6 @@ func createClient(endpoint string) pb.GraphQLClient {
 // CODE:END:quickstarts_go_eos_section3
 
 //
-/// Ethereum
-//
-
-const operationETH = `subscription {
-  searchTransactions(indexName:CALLS query: "-value:0 type:call", lowBlockNum: -1) {
-    undo cursor
-    node { hash matchingCalls { caller address value(encoding:ETHER) } }
-  }
-}`
-
-type ethereumDocument struct {
-	SearchTransactions struct {
-		Cursor string
-		Undo   bool
-		Node   struct {
-			Hash          string
-			MatchingCalls []struct {
-				Caller  string
-				Address string
-				Value   string
-			}
-		}
-	}
-}
-
-func streamEthereum(ctx context.Context) {
-	/* The client can be re-used for all requests, cache it at the appropriate level */
-	client := createClient("mainnet.eth.dfuse.io:443")
-	executor, err := client.Execute(ctx, &pb.Request{Query: operationETH})
-	panicIfError(err)
-
-	for {
-		resp, err := executor.Recv()
-		panicIfError(err)
-
-		if len(resp.Errors) > 0 {
-			for _, err := range resp.Errors {
-				fmt.Printf("Request failed: %s\n", err)
-			}
-
-			/* We continue here, but you could take another decision here, like exiting the process */
-			continue
-		}
-
-		document := &ethereumDocument{}
-		err = json.Unmarshal([]byte(resp.Data), document)
-		panicIfError(err)
-
-		result := document.SearchTransactions
-		reverted := ""
-		if result.Undo {
-			reverted = " REVERTED"
-		}
-
-		for _, call := range result.Node.MatchingCalls {
-			fmt.Printf("Transfer %s -> %s [%s Ether]%s\n", call.Caller, call.Address, call.Value, reverted)
-		}
-	}
-}
-
-//
 /// EOSIO
 //
 // CODE:BEGIN:quickstarts_go_eos_section4
@@ -190,7 +129,7 @@ func streamEOSIO(ctx context.Context) {
 }
 
 // CODE:END:quickstarts_go_eos_section5
-/* DFUSE_API_KEY="server_abcdef12345678900000000000" go run main.go eosio|ethereum */
+/* DFUSE_API_KEY="server_abcdef12345678900000000000" go run main.go eosio */
 // CODE:BEGIN:quickstarts_go_eos_section6
 func main() {
 	proto := ""
@@ -199,8 +138,6 @@ func main() {
 	}
 
 	switch proto {
-	case "ethereum", "ETH":
-		streamEthereum(context.Background())
 	default:
 		streamEOSIO(context.Background())
 	}
