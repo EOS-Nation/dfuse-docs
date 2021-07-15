@@ -7,7 +7,7 @@ aliases:
 
 dfuse exposes its data through a GraphQL-over-gRPC interface. The protobuf files are {{< external-link href="https://github.com/dfuse-io/graphql-over-grpc" title="in this GitHub repository">}}.
 
-The code from the examples on this page can be found {{< external-link href="https://github.com/dfuse-io/docs/tree/master/quickstarts" title="in the quickstarts folder of this docs GitHub repository">}}.
+The code from the examples on this page can be found {{< external-link href="https://github.com/EOS-Nation/dfuse-docs/tree/master/quickstarts" title="in the quickstarts folder of this docs GitHub repository">}}.
 
 ## 1. Get a dfuse API Key
 
@@ -36,17 +36,17 @@ The protobuf files defining our GraphQL-over-gRPC interface are available {{< ex
 
 A lot of languages provide tools to generate client stubs from protobuf files, as you can find {{< external-link href="https://grpc.io/docs/quickstart/" title="in the official gRPC documentation">}}.
 
-For your convenience, we also provide pre-generated client stubs for some languages. The code from the examples on this page can be found {{< external-link href="https://github.com/dfuse-io/docs/tree/master/quickstarts" title="in the quickstarts folder of this docs GitHub repository">}}.
+For your convenience, we also provide pre-generated client stubs for some languages. The code from the examples on this page can be found {{< external-link href="https://github.com/EOS-Nation/dfuse-docs/tree/master/quickstarts" title="in the quickstarts folder of this docs GitHub repository">}}.
 
 {{< tabs "get-client-stub">}}
 
 {{< tab title="Go" lang="shell" >}}
-git clone https://github.com/dfuse-io/docs
+git clone https://github.com/EOS-Nation/dfuse-docs
 cd docs/quickstarts/go
 {{< /tab >}}
 
 {{< tab title="Python" lang="shell" >}}
-git clone https://github.com/dfuse-io/docs
+git clone https://github.com/EOS-Nation/dfuse-docs
 cd docs/quickstarts/python
 python -m pip install grpcio-tools --ignore-installed
 {{< /tab >}}
@@ -159,7 +159,7 @@ examples:
 {{< tabs "full-working">}}
 
 {{< tab title="Go" lang="shell" >}}
-git clone https://github.com/dfuse-io/docs
+git clone https://github.com/EOS-Nation/dfuse-docs
 cd docs/quickstarts/go
 
 # Replace 'server_abcdef12345678900000000000' with your own API key!
@@ -167,7 +167,7 @@ DFUSE_API_KEY="server_abcdef12345678900000000000" go run main.go eosio
 {{< /tab >}}
 
 {{< tab title="Python" lang="shell" >}}
-git clone https://github.com/dfuse-io/docs
+git clone https://github.com/EOS-Nation/dfuse-docs
 cd docs/quickstarts/python
 python -m pip install grpcio-tools --ignore-installed
 

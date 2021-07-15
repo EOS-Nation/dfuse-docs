@@ -166,7 +166,7 @@ Add some CSS to style this HTML a bit. Replace the contents of `src/App.css` wit
 
 ## 11. Full Working Example
 
-The source code for this tutorial is available on {{< external-link href="https://github.com/dfuse-io/docs/tree/master/tutorials/eth/stream" title="GitHub" >}}. Below are the code files discussed on this page.
+The source code for this tutorial is available on {{< external-link href="https://github.com/EOS-Nation/dfuse-docs/tree/master/tutorials/eth/stream" title="GitHub" >}}. Below are the code files discussed on this page.
 
 {{< tabs "fetch-transaction-full-app">}}
 {{< tab title="src/App.js" lang="javascript" >}}

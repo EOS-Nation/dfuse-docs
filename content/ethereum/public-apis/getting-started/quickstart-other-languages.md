@@ -5,7 +5,7 @@ aliases:
   - /guides/ethereum/getting-started/other-languages/
 ---
 
-The code from the examples on this page lives {{< external-link href="https://github.com/dfuse-io/docs/tree/master/quickstarts" title="in the quickstarts folder of this docs GitHub repository">}}.
+The code from the examples on this page lives {{< external-link href="https://github.com/EOS-Nation/dfuse-docs/tree/master/quickstarts" title="in the quickstarts folder of this docs GitHub repository">}}.
 
 ## 1. Get a dfuse API Key
 
@@ -87,7 +87,7 @@ protoc graphql/graphql.proto # add your language-specific flags here
   {{< /tab >}}
 {{< /tabs >}}
 
-The code from the examples on this page lives {{< external-link href="https://github.com/dfuse-io/docs/tree/master/quickstarts" title="in the quickstarts folder of this docs GitHub repository">}}.
+The code from the examples on this page lives {{< external-link href="https://github.com/EOS-Nation/dfuse-docs/tree/master/quickstarts" title="in the quickstarts folder of this docs GitHub repository">}}.
 
 ## Generate a JWT from your API key
 
