@@ -91,7 +91,7 @@ Kylin Testnet:
 
 EOS Mainnet:
 
-* https://eosq.app
+* https://eos.eosq.eosnation.io
 * https://bloks.io
 * Age of the chain: **131M blocks** (**2.08 years** old)
 * TPS: on June 30th 2020, an average of 819 action traces per second.   Throughout the history of the chain, there was not _always_ that volume of data.

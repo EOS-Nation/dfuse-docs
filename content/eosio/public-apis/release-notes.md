@@ -113,7 +113,7 @@ For the time being, please head over to https://github.com/dfuse-io/dfuse-eosio/
 * Added `console` outputs to action traces throughout the dfuse platform.
 
 * Added `creation_tree`, visible on
-  eosq.app. {{< external-link title="See announcement" href="https://www.dfuse.io/en/blog/eosq-removes-ambiguity-when-debugging-your-smart-contract" >}}
+  eos.eosq.eosnation.io. {{< external-link title="See announcement" href="https://www.dfuse.io/en/blog/eosq-removes-ambiguity-when-debugging-your-smart-contract" >}}
   Best way to consume this is through the [GraphQL](#graphql)
   interface.
 

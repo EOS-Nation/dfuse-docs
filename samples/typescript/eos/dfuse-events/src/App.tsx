@@ -198,7 +198,7 @@ class App extends React.Component<Props, State> {
         )}`}
         <a
           style={{ paddingLeft: "5px" }}
-          href={`https://kylin.eosq.app/tx/${trace.id}`}
+          href={`https://kylin.eosq.eosnation.io/tx/${trace.id}`}
         >{`(${prefixTrxId}...${suffixTrxId})`}</a>
       </code>
     )
@@ -209,7 +209,7 @@ class App extends React.Component<Props, State> {
 
     return (
       <div style={{ textAlign: "left" }}>
-        <a href={`https://kylin.eosq.app/search?q=${encodeURIComponent(query)}`}>{query}</a>
+        <a href={`https://kylin.eosq.eosnation.io/search?q=${encodeURIComponent(query)}`}>{query}</a>
       </div>
     )
   }

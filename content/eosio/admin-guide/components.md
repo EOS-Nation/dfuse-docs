@@ -171,7 +171,7 @@ On boot, it turns to a `search-router` to save all `eosio::setabi` transactions.
 
 ### `eosq`
 
-**Description**: `eosq` is the web front-end (block explorer) interface to the dfuse APIs. A self-contained https://eosq.app
+**Description**: `eosq` is the web front-end (block explorer) interface to the dfuse APIs. A self-contained https://eos.eosq.eosnation.io
 
 **High Availability considerations**: This process is stateless, and can be scaled up or down for the desired throughput. You want at least 2 to sustain one being down.
 

@@ -83,8 +83,8 @@ ensure that it was really **your** `<contract>` that sent the inline action.
 You would not like someone doing the same `card_id=123&card_kind=club`
 fields indexing to be included in your search's results!
 
-You can check the results getting out of a test account in eosq.app
-directly: [event.card_kind:diamond parent.receiver:maouehmaoueh](https://eosq.app/search?q=event.card_kind%253Adiamond%2520parent.receiver%253Amaouehmaoueh)
+You can check the results getting out of a test account in eos.eosq.eosnation.io
+directly: [event.card_kind:diamond parent.receiver:maouehmaoueh](https://eos.eosq.eosnation.io/search?q=event.card_kind%253Adiamond%2520parent.receiver%253Amaouehmaoueh)
 
 Congratulations, you have solved your use case of finding
 all transactions dealing with a specific kind of cards, or even

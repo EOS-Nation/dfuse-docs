@@ -91,8 +91,8 @@ ensure that it was really **your** `<contract>` that sent the inline action.
 You would not like someone doing the same `pet_id=blurrycat&pet_kind=cat`
 fields indexing to be included in your search's results!
 
-You can check the results getting out of a test account in eosq.app
-directly: [event.pet_kind:rabbit receiver:eospetgameio](https://eosq.app/search?q=event.pet_kind%253Arabbit%2520receiver%253Aeospetgameio)
+You can check the results getting out of a test account in eos.eosq.eosnation.io
+directly: [event.pet_kind:rabbit receiver:eospetgameio](https://eos.eosq.eosnation.io/search?q=event.pet_kind%253Arabbit%2520receiver%253Aeospetgameio)
 
 Congratulations, you have solved your use case of finding
 all transactions dealing with a specific kind of pets, or even

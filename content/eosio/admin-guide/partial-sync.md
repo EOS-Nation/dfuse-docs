@@ -24,7 +24,7 @@ zstd -d kylin-snapshot.bin.zst
 
 ### Required information
 * `mindreader-stop-block-num: {kylin current head block number, rounded to 100}`
-  * You can go to https://kylin.eosq.app/ or use this kind of shell command: `curl -s https://kylin.dfuse.eosnation.io/v1/chain/get_info | sed 's/.*head_block_num..\([0-9]*\),.*/\1/'`
+  * You can go to https://kylin.eosq.eosnation.io/ or use this kind of shell command: `curl -s https://kylin.dfuse.eosnation.io/v1/chain/get_info | sed 's/.*head_block_num..\([0-9]*\),.*/\1/'`
 * `mindreader-snapshot-store-url: file:///{Current working directory}`
   * Folder where you downloaded the snapshot (output of command `pwd` in your shell)
 
