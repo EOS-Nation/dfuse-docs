@@ -417,7 +417,7 @@
           "reqType": true,
           "name": "AccountBalanceConnection"
         },
-        "description": "ALPHA Get a list of token balances for a specific account (at Last Irreversible Block height (LIB) only)",
+        "description": "Get a list of token balances for a specific account (at Last Irreversible Block height (LIB) only)",
         "arguments": [
           {
             "name": "account",
@@ -492,7 +492,7 @@
           "reqType": true,
           "name": "AccountBalanceConnection"
         },
-        "description": "ALPHA Get a list of token balances for a specific contract & symbol (at Last Irreversible Block height (LIB) only)",
+        "description": "Get a list of token balances for a specific contract & symbol (at Last Irreversible Block height (LIB) only)",
         "arguments": [
           {
             "name": "contract",
