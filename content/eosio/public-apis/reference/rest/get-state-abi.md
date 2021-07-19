@@ -1,6 +1,7 @@
 ---
 weight: 20
 title: GET /v0/state/abi
+release: stable
 aliases:
   - /reference/eosio/rest/state-abi/
 ---
