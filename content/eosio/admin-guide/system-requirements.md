@@ -70,7 +70,7 @@ similar age will behave similarly.
 
 #### Medium scale chains
 
-CryptoKylin:
+Kylin Testnet:
 
 * https://www.cryptokylin.io/
 * Age of the chain: **114M** blocks (2.00 years old)

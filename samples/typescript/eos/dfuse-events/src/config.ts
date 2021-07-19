@@ -6,6 +6,6 @@ export const Config = {
     process.env.REACT_APP_CHAIN_ID ||
     "5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191",
   chainApiProtocol: process.env.REACT_APP_CHAIN_API_PROTOCOL || "https",
-  chainApiHost: process.env.REACT_APP_CHAIN_API_HOST || "kylin.eos.dfuse.io",
+  chainApiHost: process.env.REACT_APP_CHAIN_API_HOST || "kylin.dfuse.eosnation.io",
   chainApiPort: process.env.REACT_APP_CHAIN_API_PORT || "443"
 }

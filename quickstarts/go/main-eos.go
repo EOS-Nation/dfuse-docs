@@ -24,7 +24,7 @@ import (
 // CODE:BEGIN:quickstarts_go_eos_section2
 func getToken(apiKey string) (token string, expiration time.Time, err error) {
 	reqBody := bytes.NewBuffer([]byte(fmt.Sprintf(`{"api_key":"%s"}`, apiKey)))
-	resp, err := http.Post("https://auth.dfuse.io/v1/auth/issue", "application/json", reqBody)
+	resp, err := http.Post("https://auth.eosnation.io/v1/auth/issue", "application/json", reqBody)
 	if err != nil {
 		err = fmt.Errorf("unable to obtain token: %s", err)
 		return
@@ -94,7 +94,7 @@ type eosioDocument struct {
 // CODE:BEGIN:quickstarts_go_eos_section5
 func streamEOSIO(ctx context.Context) {
 	/* The client can be re-used for all requests, cache it at the appropriate level */
-	client := createClient("mainnet.eos.dfuse.io:443")
+	client := createClient("eos.dfuse.eosnation.io:9000")
 	executor, err := client.Execute(ctx, &pb.Request{Query: operationEOS})
 	panicIfError(err)
 

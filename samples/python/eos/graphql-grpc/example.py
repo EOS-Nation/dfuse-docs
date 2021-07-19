@@ -12,7 +12,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 
 def token_for_api_key(apiKey):
-    connection = http.client.HTTPSConnection("auth.dfuse.io")
+    connection = http.client.HTTPSConnection("auth.eosnation.io")
     connection.request('POST', '/v1/auth/issue', json.dumps({"api_key": apiKey}), {'Content-type': 'application/json'})
     response = connection.getresponse()
 
@@ -27,7 +27,7 @@ def token_for_api_key(apiKey):
 
 def stub():
     credentials = grpc.access_token_call_credentials(token_for_api_key(sys.argv[1]))
-    channel = grpc.secure_channel('mainnet.eos.dfuse.io:443',
+    channel = grpc.secure_channel('eos.dfuse.eosnation.io:9000',
                                   credentials=grpc.composite_channel_credentials(grpc.ssl_channel_credentials(),
                                                                                  credentials))
     return graphql_pb2_grpc.GraphQLStub(channel)

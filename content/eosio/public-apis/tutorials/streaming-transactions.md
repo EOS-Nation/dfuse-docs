@@ -9,13 +9,13 @@ aliases:
 
 Once you have signed up for a {{< external-link title="dfuse account" href="https://app.dfuse.io" >}}, you will be able to create long-term API keys (see [Getting started with your account and API key]({{< ref "/platform/dfuse-cloud/free-account-and-api-key" >}}) for more info).
 
-Once you have this API key, call the endpoint {{< external-link href="https://auth.dfuse.io/v1/auth/issue">}} to get a fresh Authentication Token (JWT).
+Once you have this API key, call the endpoint {{< external-link href="https://auth.eosnation.io/v1/auth/issue">}} to get a fresh Authentication Token (JWT).
 
 {{< tabs "authentication" >}}
 {{< tab lang="go" >}}
 payload := `{"api_key":"YOUR_API_KEY_HERE"}`
 
-httpResp, err := http.Post("https://auth.dfuse.io/v1/auth/issue", "application/json", bytes.NewBuffer([]byte(payload)))
+httpResp, err := http.Post("https://auth.eosnation.io/v1/auth/issue", "application/json", bytes.NewBuffer([]byte(payload)))
 if err != nil {
     return nil, fmt.Errorf("request creation: %s", err)
 }
@@ -37,7 +37,7 @@ As documented [here]({{< relref "/platform/dfuse-cloud/authentication#obtaining-
 ## Refreshing your JWT token
 Tokens have a life span of 24h (that can vary) and need to be refreshed before they expire. Please see [Lifecycle of short-lived JWTs]({{< relref "/platform/dfuse-cloud/authentication#lifecycle-of-short-lived-jwts" >}}) for more information.
 
-The https://auth.dfuse.io/v1/auth/issue endpoint is rate-limited. Full auth documentation can be found [here]({{< relref "/platform/dfuse-cloud/authentication" >}}).
+The https://auth.eosnation.io/v1/auth/issue endpoint is rate-limited. Full auth documentation can be found [here]({{< relref "/platform/dfuse-cloud/authentication" >}}).
 
 {{< tabs "jwt-refresh" >}}
 {{< tab lang="go" >}}
@@ -80,7 +80,7 @@ opts := []grpc.DialOption{
     grpc.WithPerRPCCredentials(credential),
 }
 
-connection, err := grpc.Dial("kylin.eos.dfuse.io:443", opts...)
+connection, err := grpc.Dial("kylin.dfuse.eosnation.io:9000", opts...)
 if err != nil {
     return fmt.Errorf("run: grapheos connection connection: %s", err)
 }
@@ -95,7 +95,7 @@ graphqlClient := pbgraphql.NewGraphQLClient(connection)
 - dfuse's GraphQL documentation can be found [here]({{< ref "/platform/public-apis/graphql" >}}).
 - dfuse's GraphQL EOSIO endpoints can be found [here]({{< ref "/eosio/public-apis/reference/graphql-api" >}}).
 - If you are not familiar with GraphQL, take a look at {{< external-link href="https://graphql.org/learn/" title="Introduction to GraphQL">}}.
-- To help you construct your query visually and access our api documentation you can use {{< external-link href="https://mainnet.eos.dfuse.io/graphiql/" title="GraphiQL">}} &mdash; a graphical interactive in-browser GraphQL IDE.
+- To help you construct your query visually and access our api documentation you can use {{< external-link href="https://eos.dfuse.eosnation.io/graphiql/" title="GraphiQL">}} &mdash; a graphical interactive in-browser GraphQL IDE.
 
 ## Executing a Query
 {{< tabs "graphql-query" >}}
@@ -133,7 +133,7 @@ This query `account:eosio.msig action:propose` will stream transactions containi
 Take a look at our [Search Query Language specs]({{< ref "/platform/public-apis/search-query-language" >}}) for complete documentation.
 
 ## Cursor and Block Numbers Management
-Complete API documentation is accessible through {{< external-link href="https://mainnet.eos.dfuse.io/graphiql/" title="GraphiQL">}}
+Complete API documentation is accessible through {{< external-link href="https://eos.dfuse.eosnation.io/graphiql/" title="GraphiQL">}}
 - `lowBlockNum` parameter is the lower block number boundary, inclusively. A zero or negative value means a block relative to the head or last irreversible block (depending on if your query contains the `irreversibleOnly` flag).
 - `cursor` parameter is an opaque data piece that you can pass back to continue your search if it ever becomes disconnected. Retrieve it from the cursor field in the responses of this call. It is safe to use the same cursor in BOTH directions (forward and backward).
 

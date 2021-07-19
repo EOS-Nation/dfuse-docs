@@ -227,7 +227,7 @@ func (s *Server) postFetchToken() (body []byte, err error) {
 
 	payload := fmt.Sprintf(`{"api_key":"%s"}`, s.apiKey)
 
-	httpResp, err := http.Post("https://auth.dfuse.io/v1/auth/issue", "application/json", bytes.NewBuffer([]byte(payload)))
+	httpResp, err := http.Post("https://auth.eosnation.io/v1/auth/issue", "application/json", bytes.NewBuffer([]byte(payload)))
 	if err != nil {
 		return nil, fmt.Errorf("request creation: %s", err)
 	}

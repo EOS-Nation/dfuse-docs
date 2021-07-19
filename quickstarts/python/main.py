@@ -18,7 +18,7 @@ from graphql.graphql_pb2 import Request
 
 # CODE:BEGIN:quickstarts_python_eos_section2
 def get_token(api_key):
-    connection = HTTPSConnection("auth.dfuse.io")
+    connection = HTTPSConnection("auth.eosnation.io")
     connection.request('POST', '/v1/auth/issue', json.dumps({"api_key": api_key}), {'Content-type': 'application/json'})
     response = connection.getresponse()
 

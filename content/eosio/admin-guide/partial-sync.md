@@ -24,7 +24,7 @@ zstd -d kylin-snapshot.bin.zst
 
 ### Required information
 * `mindreader-stop-block-num: {kylin current head block number, rounded to 100}`
-  * You can go to https://kylin.eosq.app/ or use this kind of shell command: `curl -s https://kylin.eos.dfuse.io/v1/chain/get_info | sed 's/.*head_block_num..\([0-9]*\),.*/\1/'`
+  * You can go to https://kylin.eosq.app/ or use this kind of shell command: `curl -s https://kylin.dfuse.eosnation.io/v1/chain/get_info | sed 's/.*head_block_num..\([0-9]*\),.*/\1/'`
 * `mindreader-snapshot-store-url: file:///{Current working directory}`
   * Folder where you downloaded the snapshot (output of command `pwd` in your shell)
 
@@ -93,13 +93,9 @@ wasm-runtime = eos-vm-jit
 eos-vm-oc-enable = true
 eos-vm-oc-compile-threads = 4
 
-## Peers (choose your favorite ones, those are from https://github.com/cryptokylin/CryptoKylin-Testnet/blob/master/config/peer-config.ini)
+## Peers (choose your favorite ones from https://validate.eosnation.io/kylin/reports/config.html)
 p2p-peer-address = peer.kylin.alohaeos.com:9876
-p2p-peer-address = p2p.kylin.helloeos.com.cn:9876
-p2p-peer-address = kylin-testnet.starteos.io:9876
-p2p-peer-address = kylin-fn001.eossv.org:443
-p2p-peer-address = testnet.zbeos.com:9876
-p2p-peer-address = kylin.eosrio.io:39876
+p2p-peer-address = kylin.eosn.io:9876
 EOC
 
 {{< /highlight >}}
@@ -156,7 +152,7 @@ NOTE: the 'actual' start block that you can use afterwards will most likely be t
   * Take that bluck number `ls  ./dfuse-data/storage/merged-blocks/ |head -n 1` and add 500 to it
 * `trxdb-loader-stop-block-num: {100 below the value that you put in for mindreader-stop-block-num earlier}`
 * `common-chain-id: 5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191`
-  * change this if you are syncing another chain than kylin, could be scripted like this `curl -s https://kylin.eos.dfuse.io/v1/chain/get_info | sed 's/.*chain_id...\([a-f0-9]*\).*/\1/'` or with better tools like 'jq'
+  * change this if you are syncing another chain than kylin, could be scripted like this `curl -s https://kylin.dfuse.eosnation.io/v1/chain/get_info | sed 's/.*chain_id...\([a-f0-9]*\).*/\1/'` or with better tools like 'jq'
 
 ### Example kylin-phase1-trxdb.yaml
 
@@ -209,7 +205,7 @@ start:
     search-indexer-start-block: 107305500
     search-archive-shard-size: 500
     search-archive-start-block: 107305500
-    blockmeta-eos-api-upstream-addr: https://kylin.eos.dfuse.io
+    blockmeta-eos-api-upstream-addr: https://kylin.dfuse.eosnation.io
 {{< /highlight >}}
 
 ### Known Issues

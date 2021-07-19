@@ -11,12 +11,11 @@ By simply instructing your smart contract to send an inline action to `dfuseioho
 
 Once on chain, the search term `event.field:value` will allow you to retrieve those actions, anywhere on the dfuse Platform.
 
-
 {{< alert type="note" >}}
 See the [Using dfuse Events tutorial]({{< ref "eosio/public-apis/tutorials/using-dfuse-events" >}}) for a concrete example.
 {{< /alert >}}
 
-**Availability**: This feature is available on **EOS Mainnet**, **EOSIO Testnet** and **Kylin** networks.
+**Availability**: This feature is available on **EOS Mainnet** and **Kylin Testnet** networks.
 
 **Destination**: The inline action must be sent to contract `dfuseiohooks` with the action name `event`. The action signature is: `event(string auth_key, string data)`.
 
@@ -25,7 +24,6 @@ See the [Using dfuse Events tutorial]({{< ref "eosio/public-apis/tutorials/using
 **Authorization**: Specify no authorization (`std::vector<permission_level>()`) when issuing a _context-free_ action.
 
 **Indexing**: Only ONE such event per action will be indexed. If limits aren't breached, the parameters in `data` will be indexed as `event.field` in _dfuse Search_, attached to the action that **created** the inline to `dfuseiohooks:event`.  This allows you to search for `receiver:yourcontract event.field:value` or other combinations.
-
 
 ## Action parameters
 
@@ -48,3 +46,11 @@ If you need more than 3 key/values or want more than 64 bytes of value data, con
 {{< alert type="note" >}}
 If your `auth_key` is invalid or used within the wrong contract account, normal restrictions apply.
 {{< /alert >}}
+
+### Technical details
+
+Contract source: https://github.com/dfuse-io/dfuseiohooks
+
+Deployment:
+* https://eos.eosq.eosnation.io/account/dfuseiohooks/abi
+* https://kylin.eosq.eosnation.io/account/dfuseiohooks/abi

@@ -17,7 +17,7 @@ import "./index.css"
 const dfuseClient = createDfuseClient({ network: "kylin", apiKey: "web_ddaf4dcba8fd11d0f52566a27b4ffc1e" })
 
 const wsLink = new WebSocketLink({
-  uri: `wss://kylin.eos.dfuse.io/graphql`,
+  uri: `wss://kylin.dfuse.eosnation.io/graphql`,
   options: {
     reconnect: true,
     connectionParams: async () => {

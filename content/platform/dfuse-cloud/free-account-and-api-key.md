@@ -28,11 +28,11 @@ To create a new API key for your application:
 
 ## 3. Get a short-lived JWT
 
-Once you have this API key, call the `https://auth.dfuse.io/v1/auth/issue` endpoint to obtain a fresh authentication token using the following command. **Do not forget to replace the API key by your own!**
+Once you have this API key, call the `https://auth.eosnation.io/v1/auth/issue` endpoint to obtain a fresh authentication token using the following command. **Do not forget to replace the API key by your own!**
 
 {{< tabs "issuing-long-jwt">}}
 {{< tab title="Request" lang="shell" >}}
-curl https://auth.dfuse.io/v1/auth/issue -s --data-binary '{"api_key":"web_abcdef12345678900000000000"}'
+curl https://auth.eosnation.io/v1/auth/issue -s --data-binary '{"api_key":"web_abcdef12345678900000000000"}'
 {{< /tab >}}
 
 {{< tab title="Response" lang="json" >}}

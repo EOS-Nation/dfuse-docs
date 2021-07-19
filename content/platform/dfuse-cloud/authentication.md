@@ -49,18 +49,18 @@ For ease of identification, all keys will be prefixed by their key type.
 
 ## Obtaining a Short-Lived JWT
 
-Once you have this API key, call the `https://auth.dfuse.io/v1/auth/issue` endpoint to obtain a fresh Authentication Token using the following command. **Do not forget to replace the API key by your own!**
+Once you have this API key, call the `https://auth.eosnation.io/v1/auth/issue` endpoint to obtain a fresh Authentication Token using the following command. **Do not forget to replace the API key by your own!**
 
 {{< tabs "jwt-requests" >}}
 {{< tab lang="shell" >}}
 curl -XPOST \
   -H "Content-Type: application/json" \
   --data '{"api_key":"web_abcdef12345678900000000000"}' \
-  "https://auth.dfuse.io/v1/auth/issue"
+  "https://auth.eosnation.io/v1/auth/issue"
 {{< /tab >}}
 
 {{< tab lang="javascript" >}}
-fetch("https://auth.dfuse.io/v1/auth/issue", {
+fetch("https://auth.eosnation.io/v1/auth/issue", {
   method: "POST",
   body: JSON.stringify({
     api_key: "web_abcdef12345678900000000000"
@@ -83,7 +83,7 @@ headers = {
 data = '{"api_key":"web_abcdef12345678900000000000"}'
 
 # Cache JWT response (for up to 24 hours)
-response = requests.post('https://auth.dfuse.io/v1/auth/issue', headers=headers, data=data)
+response = requests.post('https://auth.eosnation.io/v1/auth/issue', headers=headers, data=data)
 {{< /tab >}}
 
 {{< tab lang="go" >}}
@@ -99,7 +99,7 @@ import (
 func main() {
 	client := &http.Client{}
 	var data = []byte(`{{"api_key":"web_abcdef12345678900000000000"}}`)
-	req, err := http.NewRequest("POST", "https://auth.dfuse.io/v1/auth/issue", data)
+	req, err := http.NewRequest("POST", "https://auth.eosnation.io/v1/auth/issue", data)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -125,7 +125,7 @@ func main() {
 # Replace this variable by an API key you got from https://app.dfuse.io
 export DFUSE_KEY=web_abcdef12345678900000000000
 function dfusetoken {
-    DFUSE_TOKEN=$(curl https://auth.dfuse.io/v1/auth/issue -s --data-binary '{"api_key":"'$DFUSE_KEY'"}' | jq -r .token)
+    DFUSE_TOKEN=$(curl https://auth.eosnation.io/v1/auth/issue -s --data-binary '{"api_key":"'$DFUSE_KEY'"}' | jq -r .token)
     export DFUSE_TOKEN
 }
 {{< /tab >}}

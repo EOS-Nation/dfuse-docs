@@ -25,7 +25,7 @@ func main() {
 	storage.OptInDeviceToken("YOU_EOS_ACCOUNT_HERE", "YOUR_DEVICE_TOKEN_HERE", msignotify.IOS)
 
 	go func() {
-		server := msignotify.NewServer("YOUR_API_KEY_HERE", "kylin.eos.dfuse.io:443", storage)
+		server := msignotify.NewServer("YOUR_API_KEY_HERE", "kylin.dfuse.eosnation.io:9000", storage)
 		if err := server.Run(send); err != nil {
 			panic(err)
 		}

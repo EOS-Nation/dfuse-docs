@@ -74,8 +74,8 @@ export const apolloClient = new ApolloClient({
 
 - The dfuse GraphQL documentation can be found [here](https://docs.dfuse.eosnation.io/#graphql)
 - If you are not familiar with GraphQL already, take a look at [Introduction to GraphQL](https://graphql.org/learn/)
-- To help you construct your query and access our API documentation you can use [GraphiQL](https://mainnet.eos.dfuse.io/graphiql/) _"A graphical interactive in-browser GraphQL IDE."_
-https://mainnet.eos.dfuse.io/graphiql/
+- To help you construct your query and access our API documentation you can use [GraphiQL](https://eos.dfuse.eosnation.io/graphiql/) _"A graphical interactive in-browser GraphQL IDE."_
+https://eos.dfuse.eosnation.io/graphiql/
 
 ### Build the GraphQL subscription
 

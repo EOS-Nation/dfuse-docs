@@ -5,14 +5,14 @@
 ### Token Management
 First, head on to our self-service API management portal (https://app.dfuse.io), after signing up you will be able to create long-term API keys.
 
-Once you have this API key, call the https://auth.dfuse.io/v1/auth/issue endpoint to get a fresh Authentication Token (JWT). 
+Once you have this API key, call the https://auth.eosnation.io/v1/auth/issue endpoint to get a fresh Authentication Token (JWT). 
 
 ```go
 ...
 
 payload := `{"api_key":"YOUR_API_KEY_HERE"}`
 
-httpResp, err := http.Post("https://auth.dfuse.io/v1/auth/issue", "application/json", bytes.NewBuffer([]byte(payload)))
+httpResp, err := http.Post("https://auth.eosnation.io/v1/auth/issue", "application/json", bytes.NewBuffer([]byte(payload)))
 if err != nil {
     return nil, fmt.Errorf("request creation: %s", err)
 }
@@ -32,7 +32,7 @@ Has documented [here](https://docs.dfuse.eosnation.io/#rest-api-post-https-auth-
 ### When to refresh your JWT token
 Tokens have a life span of 24h (that can vary) and need to be refreshed before they expire. Please see [Lifecycle of short-lived JWTs](https://docs.dfuse.eosnation.io/#authentication)
 
-https://auth.dfuse.io/v1/auth/issue endpoint is rated limited. Full documentation can be found here [API key types & Rate limiting](https://docs.dfuse.eosnation.io/#authentication)
+https://auth.eosnation.io/v1/auth/issue endpoint is rated limited. Full documentation can be found here [API key types & Rate limiting](https://docs.dfuse.eosnation.io/#authentication)
                                                                           
 
 ```go
@@ -58,7 +58,7 @@ func (jwt JWT) NeedRefresh() bool {
 ```
 ### Getting the dfuse Graphql gRPC client
 - Take a look at gRPC [Go Quick Start](https://grpc.io/docs/quickstart/go.html)
-- You can retrieve `graphql.proto` running `curl -O http://mainnet.eos.dfuse.io/graphql/graphql.proto`
+- You can retrieve `graphql.proto` running `curl -O http://eos.dfuse.eosnation.io/graphql/graphql.proto`
 - execute `protoc -I pb/ pb/graphql.proto --go_out=plugins=grpc:graphql`
 
 ### Initiating dfuse Graphql Server connection
@@ -72,7 +72,7 @@ opts := []grpc.DialOption{
     grpc.WithPerRPCCredentials(credential),
 }
 
-connection, err := grpc.Dial("kylin.eos.dfuse.io:443", opts...)
+connection, err := grpc.Dial("kylin.dfuse.eosnation.io:9000", opts...)
 if err != nil {
     return fmt.Errorf("run: grapheos connection connection: %s", err)
 }
@@ -85,8 +85,8 @@ graphqlClient := pbgraphql.NewGraphQLClient(connection)
 ### GraphQL query
 - dfuse GraphQL documention can be found [here](https://docs.dfuse.eosnation.io/#graphql)
 - If you are not familiar with GraphQL. Take a look at [Introduction to GraphQL](https://graphql.org/learn/) 
-- To help you construct your query and access our api documentation you can use [GraphiQL](https://mainnet.eos.dfuse.io/graphiql/) _"A graphical interactive in-browser GraphQL IDE."_ 
-https://mainnet.eos.dfuse.io/graphiql/
+- To help you construct your query and access our api documentation you can use [GraphiQL](https://eos.dfuse.eosnation.io/graphiql/) _"A graphical interactive in-browser GraphQL IDE."_ 
+https://eos.dfuse.eosnation.io/graphiql/
 ### Executing a query 
 ```go
 ...
@@ -121,7 +121,7 @@ This query `account:eosio.msig action:propose` will stream transactions containi
 Take a look at [Search query language specs](https://docs.dfuse.eosnation.io/#search-query-language-specs) for complete documentation.   
  
 ### Cursor and block numbers management
-Complete api documentation is accessible through [GraphiQL](https://mainnet.eos.dfuse.io/graphiql/)
+Complete api documentation is accessible through [GraphiQL](https://eos.dfuse.eosnation.io/graphiql/)
 - `lowBlockNum` parameter is the lower block num boundary, inclusively. A zero or negative value means a block relative to the head or last irreversible block (depending on irreversibleOnly).
 - `cursor` parameter is an opaque data piece that you can pass back to continue your search if it ever disconnected. Retrieve it from the cursor field in the responses of this call. It is safe to use the same cursor in BOTH directions (forward and backward).
 
