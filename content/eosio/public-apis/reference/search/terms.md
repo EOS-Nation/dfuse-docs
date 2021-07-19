@@ -30,7 +30,6 @@ These are the prefixes or fields available for query:
 * `scheduled:true` will match deferred transactions
 * `notif:true` will match *only* notifications, excluding input action or other inline actions.
 * `input:true` will match *only* the top-level actions (those present in the original transactions, and not as a side effect of contract execution).
-* `event.sub.fields`: dfuse Events indexing matching specific fields, see [dfuse Events](#dfuse-events) for details.
 * `data.sub.fields:` a good number of action-specific fields can be matched for equality. Ex: `data.from` and `data.to` (present in `transfer` operations).
     * lists are flattened, and terms matched when the query is present in the list.
     * nested documents fields are separated by `.`, so `data.user.id:hello` will match the action data: `{"data": {"user": {"id": "hello"}}}`
