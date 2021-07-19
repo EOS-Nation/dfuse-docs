@@ -123,6 +123,7 @@ ul.supported-on {
 .tag.tag-preview { background-color:$release-preview;}
 .tag.tag-alpha { background-color:$release-alpha;}
 .tag.tag-beta { background-color:$release-beta;}
+.tag.tag-discontinued { background-color:$release-discontinued;}
 
 .font-light {
   font-weight: $font-weight-light;
@@ -947,6 +948,9 @@ h4 + .method-list-item {
   }
   &.release-new a:after {
     background-color: $release-new;
+  }
+  &.release-discontinued a:after {
+    background-color: $release-discontinued;
   }
 
   a:after {

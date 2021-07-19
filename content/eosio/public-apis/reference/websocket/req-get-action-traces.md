@@ -1,7 +1,7 @@
 ---
 weight: 40
 title: get_action_traces
-release: stable
+release: discontinued
 aliases:
   - /reference/eosio/websocket/req-get-action-traces/
 ---

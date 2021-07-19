@@ -1,6 +1,7 @@
 ---
 weight: 20
 title: GET /v0/search/transactions
+release: discontinued
 aliases:
   - /reference/eosio/rest/search-transactions/
 ---

@@ -1,7 +1,7 @@
 ---
 weight: 40
 title: get_table_rows
-release: stable
+release: discontinued
 aliases:
   - /reference/eosio/websocket/req-get-table-rows/
 ---
