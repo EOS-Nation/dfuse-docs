@@ -18,7 +18,7 @@ in the `requirements.txt` at the root of this project.
 
 #### Quickstart
 
-First of all, visit [https://app.dfuse.io](https://app.dfuse.io) to get
+First of all, visit [https://dfuse.eosnation.io](https://dfuse.eosnation.io) to get
 a free API key for your project.
 
 Setup the virtual environment and pull all dependencies:

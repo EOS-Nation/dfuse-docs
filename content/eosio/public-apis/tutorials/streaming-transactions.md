@@ -7,7 +7,7 @@ aliases:
 
 ## Token Management
 
-Once you have signed up for a {{< external-link title="dfuse account" href="https://app.dfuse.io" >}}, you will be able to create long-term API keys (see [Getting started with your account and API key]({{< ref "/platform/dfuse-cloud/free-account-and-api-key" >}}) for more info).
+Once you have signed up for a {{< external-link title="dfuse account" href="https://dfuse.eosnation.io" >}}, you will be able to create long-term API keys (see [Getting started with your account and API key]({{< ref "/platform/dfuse-cloud/free-account-and-api-key" >}}) for more info).
 
 Once you have this API key, call the endpoint {{< external-link href="https://auth.eosnation.io/v1/auth/issue">}} to get a fresh Authentication Token (JWT).
 

@@ -17,7 +17,7 @@ The following assumes you have yarn installed on your computer.
 
 ### Walkthrough
 
-First, head to the dfuse self-service API management portal (https://app.dfuse.io). After signing up, you
+First, head to the dfuse self-service API management portal (https://dfuse.eosnation.io). After signing up, you
 will be able to create long-term API keys.
 
 We use the [Apollo Client](https://www.apollographql.com/docs/react/) as well as the

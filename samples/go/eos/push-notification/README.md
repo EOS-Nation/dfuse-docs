@@ -3,7 +3,7 @@
 ## Push notification example
 
 ### Token Management
-First, head on to our self-service API management portal (https://app.dfuse.io), after signing up you will be able to create long-term API keys.
+First, head on to our self-service API management portal (https://dfuse.eosnation.io), after signing up you will be able to create long-term API keys.
 
 Once you have this API key, call the https://auth.eosnation.io/v1/auth/issue endpoint to get a fresh Authentication Token (JWT). 
 

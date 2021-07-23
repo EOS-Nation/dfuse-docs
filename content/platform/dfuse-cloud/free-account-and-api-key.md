@@ -10,11 +10,11 @@ aliases:
 
 ## 1. Create a free dfuse account
 
-Visit our self-service portal {{< external-link href="https://app.dfuse.io">}} to create an account.
+Visit our self-service portal {{< external-link href="https://dfuse.eosnation.io">}} to create an account.
 
 ## 2. Create an API key
 
-Go to {{< external-link href="https://app.dfuse.io/keys">}} to create your first api key.
+Go to {{< external-link href="https://dfuse.eosnation.io/keys">}} to create your first api key.
 
 ![](/img/api_key_creation.png)
 

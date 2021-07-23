@@ -61,8 +61,8 @@ All content can be found in the `/content` directory. The structure of the websi
 - [1.1](#types--primitives) **external**: When you insert an external link use the `external-link` shortcode
 
   ```markdown
-  {{< external-link href="https://app.dfuse.io" title="dfuseio" >}}
-  {{< external-link href="https://app.dfuse.io">}}
+  {{< external-link href="https://dfuse.eosnation.io" title="dfuseio" >}}
+  {{< external-link href="https://dfuse.eosnation.io">}}
   ```
 
 - [1.2](#types--primitives) **internal references**: Please put all _internal references_ as _full paths_, for greppability and refactoring.

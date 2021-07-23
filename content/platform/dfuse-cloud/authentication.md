@@ -26,7 +26,7 @@ eyJhbGciOiJLTVNFUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NTYxMzI4MjAsImp0aSI6IjQwNWV
 
 ## Obtaining a Long-Lived API Key
 
-Once you have created an account through the <a href="https://app.dfuse.io" title="dfuse API Portal">dfuse portal</a> you will be able to obtain an API key.
+Once you have created an account through the <a href="https://dfuse.eosnation.io" title="dfuse API Portal">dfuse portal</a> you will be able to obtain an API key.
 
 1. Click on "GENERATE NEW KEY" and you'll now be able to start
 customizing your key for your specific needs.
@@ -122,7 +122,7 @@ func main() {
 {{< tab lang="bash" title=".bashrc" >}}
 # Use this in your .bashrc to speed your development environment
 
-# Replace this variable by an API key you got from https://app.dfuse.io
+# Replace this variable by an API key you got from https://dfuse.eosnation.io
 export DFUSE_KEY=web_abcdef12345678900000000000
 function dfusetoken {
     DFUSE_TOKEN=$(curl https://auth.eosnation.io/v1/auth/issue -s --data-binary '{"api_key":"'$DFUSE_KEY'"}' | jq -r .token)
