@@ -9,7 +9,7 @@ aliases:
 
 ## Subscription plans
 
-dfuse offers a fast and powerful API to interface with blockchains at an affordable price. Our main website {{< external-link href="https://www.dfuse.io/pricing" title="lists the different subscription plans">}} that are offered at the moment.
+dfuse offers a fast and powerful API to interface with blockchains at an affordable price. Our main website {{< external-link href="https://dfuse.eosnation.io/pricing" title="lists the different subscription plans">}} that are offered at the moment.
 
 You can subscribe to one of those plans by creating an account on our self-service portal and visiting the {{< external-link href="https://dfuse.eosnation.io/subscription" title="My Current Subscription">}} page. You can start using dfuse immediately after signing up and creating an API key, but you'll be subject to the acceptable use restrictions of our **Free** default plan.
 
