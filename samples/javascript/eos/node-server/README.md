@@ -19,4 +19,4 @@ your console.
 You will need to have a `DFUSE_API_KEY` environment variable defined before
 starting the development server.
 
-Obtain a free API key by visiting https://dfuse.io.
+Obtain a free API key by visiting https://dfuse.eosnation.io.

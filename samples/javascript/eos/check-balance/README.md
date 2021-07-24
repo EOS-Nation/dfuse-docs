@@ -20,4 +20,4 @@ to the example. If it's not the case, simply open http://localhost:3000 in a bro
 You will need to have a `REACT_APP_DFUSE_API_KEY` environment variable defined
 before starting the development server.
 
-Obtain a free API key by visiting https://dfuse.io.
+Obtain a free API key by visiting https://dfuse.eosnation.io.
