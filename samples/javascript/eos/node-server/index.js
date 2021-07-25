@@ -11,7 +11,7 @@ global.WebSocket = require('ws')
 async function main() {
     const client = createDfuseClient({
         apiKey: process.env.DFUSE_API_KEY,
-        network: 'mainnet'
+        network: 'eos.dfuse.eosnation.io'
     })
 
   const stream = await client.streamActionTraces(

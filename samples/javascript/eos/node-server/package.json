@@ -7,7 +7,7 @@
   "author": "dfuse Inc.",
   "license": "MIT",
   "dependencies": {
-    "@dfuse/client": "^0.2.0-rc.21",
+    "@dfuse/client": "^0.3.20",
     "node-fetch": "^2.6.1",
     "ws": "^6.2.1"
   }
