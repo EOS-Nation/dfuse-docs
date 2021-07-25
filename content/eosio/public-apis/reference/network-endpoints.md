@@ -47,7 +47,7 @@ Chain ID: `1064487b3cd1a897ce03ae5b6a865651747e2e152090f99c1d19d44e01aea5a4`
 
 The following fields are indexed for searching: account, action, auth, data.abi, data.account, data.active, data.active_key, data.actor, data.amount, data.asset_id, data.assetid, data.assetidc, data.asset_ids, data.assetids, data.asset_owner, data.auth, data.author, data.authority, data.bid, data.bidder, data.canceler, data.category, data.claimer, data.code, data.collection_name, data.creator, data.executer, data.from, data.ftofferids, data.ftofferids, data.is_active, data.is_priv, data.isproxy, data.issuer, data.level, data.location, data.maximum_supply, data.name, data.new_asset_owner, data.newname, data.newowner, data.offer_id, data.owner, data.parent, data.payer, data.period, data.permission, data.producer, data.producer_key, data.producers, data.proposal_hash, data.proposal_name, data.proposer, data.proxy, data.public_key, data.quant, data.quantity, data.ram_payer, data.receiver, data.recipient, data.recipient_asset_ids, data.requested, data.requirement, data.schema_name, data.sender, data.sender_asset_ids, data.sym, data.symbol, data.template_id, data.threshold, data.to, data.transfer, data.voter, data.voter_name, data.weight, db.key, db.table, event, input, notif, ram.consumed, ram.released, receiver, scheduled, status
 
-## EOSIO Testnet (not currently active)
+## EOSIO Testnet (planned; not currently active)
 
 Chain ID: `0db13ab9b321c37c0ba8481cb4681c2788b622c3abfd1f12f0e5353d44ba6e72`
 
@@ -87,7 +87,7 @@ Chain ID: `5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191`
 
 The following fields are indexed for searching: account, action, auth, data.abi, data.account, data.active, data.active_key, data.actor, data.amount, data.asset_id, data.assetid, data.assetidc, data.asset_ids, data.assetids, data.asset_owner, data.auth, data.author, data.authority, data.bid, data.bidder, data.canceler, data.category, data.claimer, data.code, data.collection_name, data.creator, data.executer, data.from, data.ftofferids, data.ftofferids, data.is_active, data.is_priv, data.isproxy, data.issuer, data.level, data.location, data.maximum_supply, data.name, data.new_asset_owner, data.newname, data.newowner, data.offer_id, data.owner, data.parent, data.payer, data.period, data.permission, data.producer, data.producer_key, data.producers, data.proposal_hash, data.proposal_name, data.proposer, data.proxy, data.public_key, data.quant, data.quantity, data.ram_payer, data.receiver, data.recipient, data.recipient_asset_ids, data.requested, data.requirement, data.schema_name, data.sender, data.sender_asset_ids, data.sym, data.symbol, data.template_id, data.threshold, data.to, data.transfer, data.voter, data.voter_name, data.weight, db.key, db.table, event, input, notif, ram.consumed, ram.released, receiver, scheduled, status
 
-## Jungle Testnet (Experimental)
+## Jungle Testnet (experimental; not currently active)
 
 Chain ID: `2a02a0053e5a8cf73a56ba0fda11e4d92e0238a4a2aa74fccf46d5a910746840`
 
