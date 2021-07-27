@@ -19,7 +19,11 @@ additional guarantees:
 
   * With HTTP Header: `X-Eos-Push-Guarantee: handoff:1`, the call is *blocking* until the transaction makes it into a block that is still in the longest chain after block production got handed off to a different BP 1, 2 or 3 times (with `handoffs:2` and `handoffs:3`)
 
-  * With HTTP Header: `X-Eos-Push-Guarantee: irreversible`, the call is *blocking* until the block in which the transaction was inserted becomes irreversible.
+  * With HTTP Header: `X-Eos-Push-Guarantee: irreversible`, the call is *blocking* until the block in which the transaction was inserted becomes irreversible
+
+Also:
+
+  * With HTTP Header: `X-Eos-Push-Guarantee-Output-Inline-Traces: true`, the call will return inline traces in the response
 
 The content of the request and response is identical to the regular
 "push_transaction" endpoint, except:
