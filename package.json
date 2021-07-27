@@ -19,10 +19,10 @@
   },
   "homepage": "https://github.com/eoscanada/dfuse-docs-2#readme",
   "devDependencies": {
-    "graphql": "^14.5.8",
-    "graphql-tag": "^2.10.1"
+    "graphql": "^15.5.1",
+    "graphql-tag": "^2.12.5"
   },
   "dependencies": {
-    "mkdirp": "^1.0.3"
+    "mkdirp": "^1.0.4"
   }
 }
