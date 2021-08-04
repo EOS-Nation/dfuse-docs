@@ -15,15 +15,11 @@ You can subscribe to one of those plans by creating an account on our self-servi
 
 For more information regarding this acceptable use policy, we invite you to read the [Rate Limiting]({{< ref "#acceptable-use-limits" >}}) section below.
 
-We recommend you to setup a payment method as soon as you consider using the service for any serious project. You can adjust your subscription plan at any time and we will prorate the payment for the remainder of your billing cycle.
-
 ## What are Documents?
 
 A **Document** is a response payload returned by the dfuse API.
 
-Each of our subscription plan includes a fixed number of **Documents**, which we may change over time and are indicated when you setup your subscription. You can use the dfuse API for the fixed monthly price of your subscription, but any extra **Document** passed that threshold will be charged at a per unit price.
-
-Please note that our **Pay-As-You-Go** (**Free** with a registered payment method) is **0.00$** per month up to the acceptable use limit. This is the most flexible option as it does not force you into committing to a monthly subscription, but still ensures that your application will not be impacted if you go beyond the number of free **Documents**.
+Each of our subscription plan includes a fixed number of **Documents**, which we may change over time and are indicated on your invoice when you setup your subscription. You can use the dfuse API for the fixed monthly price of your subscription, but any extra **Document** above that threshold will have an additional charge.
 
 ## How can I know how many Documents I have used?
 
@@ -61,7 +57,8 @@ Because we expect well-behaved clients applications to request only one JWT, cac
 
 ### REST endpoints
 
-At the moment we do not have any rate limiting in place for those endpoints.
+* push_transaction, send_transaction: 100/sec, per IP address
+* all other: 150/sec, per IP address
 
 ### Websocket endpoints
 
