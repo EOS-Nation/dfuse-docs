@@ -12,6 +12,8 @@ The _dfuse_ API is available for multiple EOSIO networks. See {{< external-link 
 
 ## EOS Mainnet
 
+Chain ID: `aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906`
+
 | Resource       | URL                                                                                                                             |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | dfuse Home     | https://eos.dfuse.eosnation.io                                                                                                  |
