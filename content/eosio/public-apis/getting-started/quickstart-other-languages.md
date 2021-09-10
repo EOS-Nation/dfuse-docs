@@ -42,12 +42,12 @@ For your convenience, we also provide pre-generated client stubs for some langua
 
 {{< tab title="Go" lang="shell" >}}
 git clone https://github.com/EOS-Nation/dfuse-docs
-cd docs/quickstarts/go
+cd dfuse-docs/quickstarts/go
 {{< /tab >}}
 
 {{< tab title="Python" lang="shell" >}}
 git clone https://github.com/EOS-Nation/dfuse-docs
-cd docs/quickstarts/python
+cd dfuse-docs/quickstarts/python
 python -m pip install grpcio-tools --ignore-installed
 {{< /tab >}}
 
@@ -160,7 +160,7 @@ examples:
 
 {{< tab title="Go" lang="shell" >}}
 git clone https://github.com/EOS-Nation/dfuse-docs
-cd docs/quickstarts/go
+cd dfuse-docs/quickstarts/go
 
 # Replace 'server_abcdef12345678900000000000' with your own API key!
 DFUSE_API_KEY="server_abcdef12345678900000000000" go run main.go eosio
@@ -168,7 +168,7 @@ DFUSE_API_KEY="server_abcdef12345678900000000000" go run main.go eosio
 
 {{< tab title="Python" lang="shell" >}}
 git clone https://github.com/EOS-Nation/dfuse-docs
-cd docs/quickstarts/python
+cd dfuse-docs/quickstarts/python
 python -m pip install grpcio-tools --ignore-installed
 
 # Replace 'server_abcdef12345678900000000000' with your own API key!

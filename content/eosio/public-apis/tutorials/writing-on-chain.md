@@ -201,7 +201,7 @@ tutorial to make reading easier:
 
 {{< tab lang="shell" title="TypeScript">}}
 git clone https://github.com/EOS-Nation/dfuse-docs
-cd docs/tutorials/eos/push-guaranteed
+cd dfuse-docs/tutorials/eos/push-guaranteed
 yarn install
 
 # Replace '<dfuse API key here>' with your own API key!

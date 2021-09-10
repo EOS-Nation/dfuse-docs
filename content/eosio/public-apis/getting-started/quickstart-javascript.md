@@ -196,7 +196,7 @@ Here the small glue code containing the `main` function, imports and other helpe
 
 {{< tab lang="shell" title="Node.js">}}
 git clone https://github.com/EOS-Nation/dfuse-docs
-cd docs/quickstarts/javascript/node
+cd dfuse-docs/quickstarts/javascript/node
 npm install
 
 # Replace 'server_abcdef12345678900000000000' with your own API key!
@@ -206,7 +206,7 @@ DFUSE_API_KEY=server_abcdef12345678900000000000 node index.eosio.js
 
 {{< tab lang="shell" title="Bundler">}}
 git clone https://github.com/EOS-Nation/dfuse-docs
-cd docs/quickstarts/javascript/bundler
+cd dfuse-docs/quickstarts/javascript/bundler
 npm install
 
 # Replace 'web_abcdef12345678900000000000' with your own API key!
@@ -222,7 +222,7 @@ start index.eosio.thml # Windows
 
 {{< tab lang="shell" title="Browser">}}
 git clone https://github.com/EOS-Nation/dfuse-docs
-cd docs/quickstarts/javascript/browser
+cd dfuse-docs/quickstarts/javascript/browser
 
 # Manually edit index.eosio.html changing `web_abcdef12345678900000000000` with your own API key
 
