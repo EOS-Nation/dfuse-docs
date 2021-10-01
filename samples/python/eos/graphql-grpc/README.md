@@ -32,3 +32,5 @@ Once your environment is setup properly, simply run the `example.py` script:
 ```bash
 python3 example.py YOUR_API_KEY_HERE
 ```
+
+If you have problems connecting to grpc with errors like `Handshake failed with fatal error SSL_ERROR_SSL: error:1000007d:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED.`, then remove the "DST Root CA X3" entry from ./env/lib/python3.9/site-packages/grpc/_cython/_credentials/roots.pem or similar file.
