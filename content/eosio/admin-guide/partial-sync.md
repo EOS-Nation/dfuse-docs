@@ -10,11 +10,11 @@ release: alpha
 
 * A working `dfuseeos` command and nodeos installed with 'deep-mind' patch (see https://github.com/dfuse-io/dfuse-eosio/blob/develop/DEPENDENCIES.md#dfuse-instrumented-eosio-prebuilt-binaries)
 
-## Get a clean workspace folder, fetch a Kylin snapshot (using EOS Nation snapshots as a source in this example)
+## Get a clean workspace folder, fetch a Kylin snapshot
 
 {{< highlight sh >}}
 mkdir workspace && cd workspace
-curl -L -o kylin-snapshot.bin.zst https://snapshots.eosnation.io/kylin/latest
+curl -L -o kylin-snapshot.bin.zst https://snapshots.eosnation.io/kylin-v4/latest
 zstd -d kylin-snapshot.bin.zst
 {{< /highlight >}}
 
@@ -38,7 +38,6 @@ start:
     config-file: ""
     log-to-file: false
     mindreader-log-to-zap: false
-    mindreader-merge-and-store-directly: true
     mindreader-start-failure-handler: true
     mindreader-blocks-chan-capacity: 100000
     mindreader-restore-snapshot-name: snapshot.bin

@@ -83,7 +83,6 @@ start:
   - mindreader
   flags:
     mindreader-log-to-zap: false
-    mindreader-merge-and-store-directly: true
     mindreader-start-failure-handler: true
     mindreader-blocks-chan-capacity: 100000
     mindreader-restore-snapshot-name: latest
@@ -115,9 +114,9 @@ When you are live (see notes list item 3) , you can continue with Phase 2.
 
 ##### Potential Problems/Notes
 
-1. Due to usage of `merge-and-store-directly`, when `mindreader` quits, it must always start back at least 100 blocks back in time! This is the reason why `mindreader-restore-snapshot-name: latest` is used. However, this is problematic if there is no snapshot taken yet, `mindreader` restarts where it left off and there is will be a bundle missing. We need to improve something for this case.
+1. When `mindreader` quits, it must always start back at least 100 blocks back in time! This is the reason why `mindreader-restore-snapshot-name: latest` is used. However, this is problematic if there is no snapshot taken yet, `mindreader` restarts where it left off and there is will be a bundle missing. We need to improve something for this case.
 1. When you will enter `Ctrl-C` to terminate phase 1, it's gonna take a while before it actually exits. Do **not** hit `Ctrl-C` again if the process has still activity, you can do `tail -f dfuse-data/dfuse.log.json` to monitor for progress, you should see log lines like: `{"level":"info","ts":1589529926.052727,"logger":"mindreader","caller":"mindreader/mindreader.go:235","msg":"will shutdown when block count == 0","block_count":99970}`.
-1. There is a problem when we reach "live" blocks since the `mindreader-merge-and-store-directly` cannot deals with forks. This is a minor problem because the process will actually kills itself automatically in the presence of the first fork. This means in this phase, it's impossible to keep a "mindreader" running on live blocks (most probably, unless there is 0 fork which is possible, but more rare on "normal" circumstances). There is the possibility to set a stop block `mindreader-stop-block-num: XXX` in the config, that will tell `mindreader` to stop once it reaches this block.
+1. There is a problem when we reach "live" blocks since `mindreader` will start generating one-block files instead of merged blocks. A `merger` is required.
 
 #### Phase 2
 
