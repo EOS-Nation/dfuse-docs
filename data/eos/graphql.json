@@ -135,7 +135,7 @@
           "reqType": true,
           "name": "AccountHistoryActionsConnection"
         },
-        "description": "WARNING: This is a BETA Query. IT MIGHT STILL CHANGE.\n\nRetrieve the last actions, that are irreversible, and that:\n1) notified an account, or\n2) was authorized by an account.\n\nResults are _actions_, returned in reverse order (from recent to older actions).\n\nNOTE: usually, the backing service of this method holds a _truncated_ window of history, per account.\n\nRead the `cursor` in the response, and pass it back to `cursor` to continue paginating. This is a short-lived cursor, especially as the truncation window goes by.",
+        "description": "Retrieve the last actions, that are irreversible, and that:\n1) notified an account, or\n2) was authorized by an account.\n\nResults are _actions_, returned in reverse order (from recent to older actions).\n\nNOTE: usually, the backing service of this method holds a _truncated_ window of history, per account.\n\nRead the `cursor` in the response, and pass it back to `cursor` to continue paginating. This is a short-lived cursor, especially as the truncation window goes by.",
         "arguments": [
           {
             "name": "account",
