@@ -335,7 +335,7 @@
         "type": {
           "name": "Block"
         },
-        "description": "ALPHA Get a single block by its ID or its number. You cannot specify both.",
+        "description": "Get a single block by its ID or its number. You cannot specify both.",
         "arguments": [
           {
             "name": "id",
@@ -359,7 +359,7 @@
           "reqType": true,
           "name": "TokenConnection"
         },
-        "description": "ALPHA Get a list of contract tokens (at Last Irreversible Block height (LIB) only)",
+        "description": "Get a list of contract tokens (at Last Irreversible Block height (LIB) only)",
         "arguments": [
           {
             "name": "tokenSymbols",
