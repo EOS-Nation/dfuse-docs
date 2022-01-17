@@ -11,7 +11,7 @@ import (
 	"os"
 	"time"
 
-	pb "github.com/dfuse-io/docs/quickstarts/go/pb"
+	pb "github.com/EOS-Nation/dfuse-docs/quickstarts/go/pb"
 	"github.com/tidwall/gjson"
 	"golang.org/x/oauth2"
 	"google.golang.org/grpc"
