@@ -304,7 +304,7 @@ func NewGraphQLClient(cc *grpc.ClientConn) GraphQLClient {
 }
 
 func (c *graphQLClient) Execute(ctx context.Context, in *Request, opts ...grpc.CallOption) (GraphQL_ExecuteClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_GraphQL_serviceDesc.Streams[0], "/dfuse.eosio.v1.GraphQL/Execute", opts...)
+	stream, err := c.cc.NewStream(ctx, &_GraphQL_serviceDesc.Streams[0], "/dfuse.graphql.v1.GraphQL/Execute", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -366,7 +366,7 @@ func (x *graphQLExecuteServer) Send(m *Response) error {
 }
 
 var _GraphQL_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "dfuse.eosio.v1.GraphQL",
+	ServiceName: "dfuse.graphql.v1.GraphQL",
 	HandlerType: (*GraphQLServer)(nil),
 	Methods:     []grpc.MethodDesc{},
 	Streams: []grpc.StreamDesc{
