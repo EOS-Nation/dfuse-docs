@@ -14,7 +14,7 @@ Visit our self-service portal {{< external-link href="https://dfuse.eosnation.io
 
 ## 2. Create an API key
 
-Go to {{< external-link href="https://dfuse.eosnation.io/keys">}} to create your first api key.
+Go to {{< external-link href="https://dfuse.eosnation.io/dfuse">}} to create your first api key.
 
 ![](/img/api_key_creation.png)
 
