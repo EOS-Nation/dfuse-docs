@@ -18,13 +18,7 @@ Go to {{< external-link href="https://dfuse.eosnation.io/dfuse">}} to create you
 
 ![](/img/api_key_creation.png)
 
-To create a new API key for your application:
-
-* **API Key Name**: Identifies the purpose of your key in the portal.
-* Category:
-  - **Web**: You want to embed your API key in the client-side of a web application. Specify your website as the origin {{< external-link title="as it will appear in the HTTP header" href="https://tools.ietf.org/html/rfc6454#section-7">}}
-  - **Mobile**: You want to embed your API key in a mobile application deployed on an app store.
-  - **Server**: You want to connect your server backend directly with our service.
+To create a new API key for your application, click the "Create Key" button.
 
 ## 3. Get a short-lived JWT
 
