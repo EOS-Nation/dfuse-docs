@@ -144,7 +144,7 @@ function printResult(result, startTime, endTime) {
   console.log(`Pushed with guarenteed '${config.guaranteed}' in '${elapsed}' seconds`)
 
   const networkMatch = client.endpoints.restUrl.match(
-    /https:\/\/(eos|wax|testnet|kylin|jungle3).dfuse.eosnation.io/
+    /https:\/\/(eos|wax|testnet|kylin|jungle4).dfuse.eosnation.io/
   )
   if (networkMatch !== null && networkMatch[1] != null) {
     let network = networkMatch[1]
