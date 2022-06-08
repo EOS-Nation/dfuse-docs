@@ -9,7 +9,8 @@ First install all the dependencies:
 
 Then simply launch the development mode to see the end results:
 
-    DFUSE_API_KEY=<dfuse API key here> node index.js
+    export DFUSE_API_KEY=<dfuse API key here>
+    node index.js
 
 When running this, you should see token transfer starting to flow through
 your console.
