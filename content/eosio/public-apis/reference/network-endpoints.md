@@ -54,26 +54,6 @@ The following fields are indexed for searching: account, action, auth, data.abi,
 
 The following transaction and account filters are applied: 'm.federation' || receiver == 'm.federation' || (account == 'eosio.token' && (data.to == 'm.federation' || data.from == 'm.federation'))
 
-## EOSIO Testnet (planned; not currently active)
-
-Chain ID: `0db13ab9b321c37c0ba8481cb4681c2788b622c3abfd1f12f0e5353d44ba6e72`
-
-| Resource       | URL                                                                                                                             |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| dfuse Home     | https://testnet.dfuse.eosnation.io                                                                                              |
-| Firehose Home  | https://testnet.firehose.eosnation.io                                                                                           |
-| Block Explorer | https://testnet.eosq.eosnation.io                                                                                               |
-| Authentication | https://auth.eosnation.io/v1/auth/issue                                                                                         |
-| WebSocket      | wss://testnet.dfuse.eosnation.io/v1/stream                                                                                      |
-| REST           | https://testnet.dfuse.eosnation.io/                                                                                             |
-| GraphQL over HTTP | https://testnet.dfuse.eosnation.io/graphql                                                                                   |
-| GraphQL over WebSocket | wss://testnet.dfuse.eosnation.io/graphql                                                                                |
-| GraphQL over gRPC | testnet.dfuse.eosnation.io:9000                                                                                              |
-| Firehose GraphQL over gRPC | testnet.firehose.eosnation.io:9000                                                                                  |
-| GraphQL Examples & References | {{< external-link title="GraphiQL" href="https://testnet.dfuse.eosnation.io/graphiql/" >}}                       |
-
-The following fields are indexed for searching: account, action, auth, data.abi, data.account, data.active, data.active_key, data.actor, data.amount, data.asset_id, data.assetid, data.assetidc, data.asset_ids, data.assetids, data.asset_owner, data.auth, data.author, data.authority, data.bid, data.bidder, data.canceler, data.category, data.claimer, data.code, data.collection_name, data.creator, data.executer, data.from, data.ftofferids, data.ftofferids, data.is_active, data.is_priv, data.isproxy, data.issuer, data.level, data.location, data.maximum_supply, data.name, data.new_asset_owner, data.newname, data.newowner, data.offer_id, data.owner, data.parent, data.payer, data.period, data.permission, data.producer, data.producer_key, data.producers, data.proposal_hash, data.proposal_name, data.proposer, data.proxy, data.public_key, data.quant, data.quantity, data.ram_payer, data.receiver, data.recipient, data.recipient_asset_ids, data.requested, data.requirement, data.schema_name, data.sender, data.sender_asset_ids, data.sym, data.symbol, data.template_id, data.threshold, data.to, data.transfer, data.voter, data.voter_name, data.weight, db.key, db.table, event, input, notif, ram.consumed, ram.released, receiver, scheduled, status
-
 ## Kylin Testnet
 
 Chain ID: `5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191`
