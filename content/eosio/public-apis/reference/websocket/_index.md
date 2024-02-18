@@ -7,7 +7,7 @@ aliases:
 
 The WebSocket-based API fuses batch processing and streaming capabilities to give you one single endpoint with strong guarantees.
 
-{{< alert type="note">}}
+{{< alert type="note" >}}
 For `get_action_traces` and `get_table_rows` streams, we **strongly suggest** to use the [GraphQL Subscription searchTransactionsForward]({{< ref "/eosio/public-apis/reference/graphql-api#subscription-searchtransactionsforward" >}}) instead of `get_action_traces` and `get_table_rows`. Main advantages of using the GraphQL API:
 
 - Possibility to also perform a paginated query instead of streaming.
@@ -150,8 +150,9 @@ If an error occurs during the request, you'll get an error response
 
 Once connected to the WebSocket, every 10 seconds, you get a `ping` response from the server.
 
-{{< alert type="note">}}
+{{< alert type="note" >}}
 Please note that each `ping` response is billed as one document.
+{{< /alert >}}
 
 {{< highlight json >}}
 {"type":"ping","data":"2018-01-01T00:00:10.526391919Z"}
